@@ -1,0 +1,139 @@
+dn: ou=people,dc=chiodino,dc=bosco,dc=local
+objectclass: organizationalUnit
+objectclass: top
+ou: people
+
+dn: uid=collidinguser,ou=people,dc=chiodino,dc=bosco,dc=local
+cn: Colliding User
+gidnumber: 2000
+givenname: HLC
+homedirectory: /home/bosco/collidinguser
+loginshell: /bin/bash
+mail: collidinguser@chiodino.bosco.local
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: shadowAccount
+objectclass: top
+shadowlastchange: 0
+shadowmax: 62
+shadowwarning: 14
+sn: HLC
+uid: collidinguser
+uidnumber: 2000
+userpassword: {SHA}XmmMbE1GPwqgdg88MSrvSTIPU6M=
+
+dn: uid=emailuser,ou=people,dc=chiodino,dc=bosco,dc=local
+cn: Email User
+gidnumber: 2001
+givenname: HLC
+homedirectory: /home/bosco/emailuser
+loginshell: /bin/bash
+mail: emailuser@domain1.tld
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: shadowAccount
+objectclass: top
+shadowlastchange: 0
+shadowmax: 62
+shadowwarning: 14
+sn: HLC
+uid: emailuser
+uidnumber: 2001
+userpassword: {SHA}XmmMbE1GPwqgdg88MSrvSTIPU6M=
+
+dn: uid=emailadmin,ou=people,dc=chiodino,dc=bosco,dc=local
+cn: Email Admin
+gidnumber: 2002
+givenname: HLC
+homedirectory: /home/bosco/emailadmin
+loginshell: /bin/bash
+mail: emailadmin@domain2.tld
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: shadowAccount
+objectclass: top
+shadowlastchange: 0
+shadowmax: 62
+shadowwarning: 14
+sn: HLC
+uid: emailadmin
+uidnumber: 2002
+userpassword: {SHA}XmmMbE1GPwqgdg88MSrvSTIPU6M=
+
+dn: ou=groups,dc=chiodino,dc=bosco,dc=local
+objectclass: organizationalUnit
+objectclass: top
+ou: groups
+
+dn: cn=collidingroup,ou=groups,dc=chiodino,dc=bosco,dc=local
+businesscategory: Network
+cn: collidingroup
+description: groupofnames for icinga
+member: uid=collidinguser,ou=people,dc=chiodino,dc=bosco,dc=local
+objectclass: groupOfNames
+objectclass: top
+
+dn: cn=group-chiodino,ou=groups,dc=chiodino,dc=bosco,dc=local
+businesscategory: Network
+cn: group-chiodino
+description: groupofnames for icinga
+member: uid=collidinguser,ou=people,dc=chiodino,dc=bosco,dc=local
+objectclass: groupOfNames
+objectclass: top
+
+dn: cn=emailusers,ou=groups,dc=chiodino,dc=bosco,dc=local
+businesscategory: Network
+cn: emailusers
+description: groupofnames for icinga
+member: uid=emailuser,ou=people,dc=chiodino,dc=bosco,dc=local
+objectclass: groupOfNames
+objectclass: top
+
+dn: cn=emailadmins,ou=groups,dc=chiodino,dc=bosco,dc=local
+businesscategory: Network
+cn: emailadmins
+description: groupofnames for icinga
+member: uid=emailadmin,ou=people,dc=chiodino,dc=bosco,dc=local
+objectclass: groupOfNames
+objectclass: top
+
+dn: uid=schizophrenic,ou=people,dc=chiodino,dc=bosco,dc=local
+cn: Colliding User
+gidnumber: 2003
+givenname: HLC
+homedirectory: /home/bosco/collidinguser
+loginshell: /bin/bash
+mail: schizophrenic@chiodino.bosco.local
+objectclass: inetOrgPerson
+objectclass: posixAccount
+objectclass: shadowAccount
+objectclass: top
+shadowlastchange: 0
+shadowmax: 62
+shadowwarning: 14
+sn: HLC
+uid: schizophrenic
+uidnumber: 2003
+userpassword: {SHA}XmmMbE1GPwqgdg88MSrvSTIPU6M=
+
+dn: ou=wierd,ou=groups,dc=chiodino,dc=bosco,dc=local
+objectclass: organizationalUnit
+objectclass: top
+ou: groups
+
+dn: cn=users,ou=wierd,ou=groups,dc=chiodino,dc=bosco,dc=local
+businesscategory: Network
+cn: users
+description: groupofnames for icinga
+member: uid=schizophrenic,ou=people,dc=chiodino,dc=bosco,dc=local
+objectclass: groupOfNames
+objectclass: top
+
+dn: cn=admin,ou=wierd,ou=groups,dc=chiodino,dc=bosco,dc=local
+businesscategory: Network
+cn: admin
+description: groupofnames for icinga
+member: uid=schizophrenic,ou=people,dc=chiodino,dc=bosco,dc=local
+objectclass: groupOfNames
+objectclass: top
+
