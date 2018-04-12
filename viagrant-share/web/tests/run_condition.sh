@@ -18,4 +18,4 @@ $script_dir/icingaweb_init.sh $testnum
 
 bash $test_dir/$testnum/inner_test.sh
 
-mv /var/log/icingaweb2/icingaweb2.log /var/log/icingaweb2/icingaweb2.log.$verlabel.$testnum
+mv /var/log/icingaweb2/icingaweb2.log $test_dir/out/icingaweb2.log.$verlabel.$testnum

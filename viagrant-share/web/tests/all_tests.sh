@@ -1,4 +1,11 @@
+#!/bin/bash
+
 test_dir=/viagrant-share/web/tests
+test -d $test_dir/out || \
+	mkdir -p  $test_dir/out
+
+exec 2>&1
+exec &> >(tee $test_dir/out/test_results)
 
 echo "testing 2.5.0"
 $test_dir/test_single_version.sh ebe1917
@@ -14,3 +21,4 @@ $test_dir/test_single_version.sh 02391e6
 
 echo "testing PR #3403"
 $test_dir/test_single_version.sh 4c9733c
+
